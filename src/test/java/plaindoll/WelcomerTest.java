@@ -1,35 +1,33 @@
 package plaindoll;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class WelcomerTest {
-	
-	private Welcomer welcomer = new Welcomer();
-	// Если хочешь больше веселья и информации про ДевОпс - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
-	// https://t.me/notopsofficial
-
-	@Test
-	public void welcomerSaysWelcome() {
-		assertThat(welcomer.sayWelcome(), containsString("Welcome"));
-	}
-	@Test
-	public void welcomerSaysFarewell() {
-		assertThat(welcomer.sayFarewell(), containsString("Farewell"));
-	}
-	@Test
-	public void welcomerSaysHunter() {
-		assertThat(welcomer.sayWelcome(), containsString("hunter"));
-		assertThat(welcomer.sayFarewell(), containsString("hunter"));
-	}
-	@Test
-	public void welcomerSaysSilver(){
-		assertThat(welcomer.sayNeedGold(), containsString("gold"));
-	}
-	@Test
-	public void welcomerSaysSomething(){
-		assertThat(welcomer.saySome(), containsString("something"));
-	}
+public class WelcomerTest{
+    @Test
+    public void testSayWelcome(){
+        Welcomer welcomer = new Welcomer();
+        assertEquals("Welcome dear traveler, we have need of your services", welcomer.sayWelcome());
+    }
+    @Test
+    public void testSayWelcomeWithName(){
+        Welcomer welcomer = new Welcomer();
+        assertEquals("Welcome dear John, we have need of your services", welcomer.sayWelcome("John"));
+    }
+    @Test
+    public void testSayFarewell(){
+        Welcomer welcomer = new Welcomer();
+        assertEquals("See you later, alligator", welcomer.sayFarewell());
+    }
+    @Test
+    public void testSayNeed(){
+        Welcomer welcomer = new Welcomer();
+        assertEquals("We need your help!", welcomer.sayNeed());
+    }
+    @Test
+    public void testHunterReply(){
+        Welcomer welcomer = new Welcomer();
+        assertTrue(welcomer.getHunterReply().contains("hunter"));
+    }
 }
