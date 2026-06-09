@@ -35,3 +35,6 @@
 ![4](screenshots/04-successful-build-master.png)
 ![5](screenshots/05-build-log-nexus-error.png)
 ![6](screenshots/06-final-green-build.png)
+
+
+![Скриншот 7](screenshots/07-final-report.png)
