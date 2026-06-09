@@ -29,9 +29,9 @@
 
 ## Результат работы
 
-![1](screenshots/1.png)
-![2](screenshots/2.png)
-![3](screenshots/3.png)
-![4](screenshots/4.png)
-![5](screenshots/5.png)
-![6](screenshots/6.png)
+![1](screenshots/01-build-steps-conditions.png)
+![2](screenshots/02-maven-settings-upload.png)
+![3](screenshots/03-maven-settings-link.png)
+![4](screenshots/04-successful-build-master.png)
+![5](screenshots/05-build-log-nexus-error.png)
+![6](screenshots/06-final-green-build.png)
